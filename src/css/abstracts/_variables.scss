@@ -1,0 +1,35 @@
+/*------------------------------------*\
+    #COLORS
+\*------------------------------------*/
+// Primary Colours
+$color-primary-blue: #1a73e8;
+$color-primary-black: #000;
+$color-primary-white: #fff;
+
+// Modal colors
+$color-modal-title: #1a73e8;
+$color-modal-button: #1a73e8;
+$color-modal-miniheader: #90949c;
+$color-modal-form-label: #000000;
+$color-modal-field-border: #e2e2e2;
+$color-modal-buttton-background: #1a73e8;
+$color-modal-button-border: #1a73e8;
+
+// Button Colors
+$color-button-primary: #1a73e8;
+$color-button-default-shadow: rgba(0, 0, 0, 0.1);
+
+/*------------------------------------*\
+    #DIMENSIONS
+\*------------------------------------*/
+// Button Dimensions
+$button-medium-width: 74px;
+$button-large-width: 50px;
+$button-small-width: 20px;
+
+$button-medium-radius: 34px;
+
+/*------------------------------------*\
+    #SHADOWS
+\*------------------------------------*/
+$shadow-button-default: 1px 2px 5px $color-button-default-shadow;

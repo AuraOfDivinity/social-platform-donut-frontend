@@ -12,7 +12,7 @@ import {
   MdLanguage
 } from 'react-icons/md';
 import { FaUserTag } from 'react-icons/fa';
-import '../../../dashboard/navigation/navigation.scss';
+// import '../../../dashboard/navigation/navigation.scss';
 
 const SettingSidebar = props => {
   const iconsSize = 40;

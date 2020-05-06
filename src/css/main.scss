@@ -1,0 +1,65 @@
+/*------------------------------------*\
+    #CONTENTS
+\*------------------------------------*/
+/**
+ * ABSTRACTS..............................Declarations of Sass variables & mixins
+ * BASE...................................Default element styles
+ * LAYOUT.................................Layout-specific styles
+ * COMPONENTS.............................Component styles
+ * PAGES..................................Page specific styles
+ * THEMES.................................Theme styles
+ * VENDORS...............................
+ */
+/*------------------------------------*\
+    #BOOTSTRAP
+\*------------------------------------*/
+@import "~bootstrap/scss/bootstrap";
+
+/*------------------------------------*\
+    #ABSTRACTS
+\*------------------------------------*/
+@import "./abstracts/variables";
+@import "./abstracts//mixins";
+
+/*------------------------------------*\
+    #BASE
+\*------------------------------------*/
+@import "./base/reset";
+@import "./base/typography";
+
+/*------------------------------------*\
+    #COMPONENTS
+\*------------------------------------*/
+@import "./components//button";
+@import "./components/upcoming-events";
+@import "./components/notifications";
+@import "./components/portfolio";
+@import "./components/updates";
+@import "./components/newsfeed";
+@import "./components/modals";
+@import "./components/user-details";
+@import "./components/posts";
+@import "./components/org-info";
+
+/*------------------------------------*\
+    #LAYOUT
+\*------------------------------------*/
+@import "./layouts/navigation";
+@import "./layouts/header";
+@import "./layouts/footer";
+
+/*------------------------------------*\
+    #PAGES
+\*------------------------------------*/
+@import "./pages/dashboard";
+@import "./pages/profile";
+@import "./pages/pinned-posts";
+@import "./pages/organization";
+
+/*------------------------------------*\
+    #THEMES
+\*------------------------------------*/
+
+/*------------------------------------*\
+    #VENDORS
+\*------------------------------------*/

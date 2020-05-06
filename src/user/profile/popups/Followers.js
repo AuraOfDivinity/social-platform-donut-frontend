@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import {Modal, Button, Row, Col} from 'react-bootstrap';
 import logo from "../../../svgs/profile-icon.svg";
-import "./popups.scss";
+// import "./popups.scss";
 
 export class Followers extends Component{
     // eslint-disable-next-line

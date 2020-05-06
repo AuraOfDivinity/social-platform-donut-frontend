@@ -1,0 +1,17 @@
+//Square variants
+.btn-square {
+  @include button($radius: 0px);
+}
+
+.btn-square-inactive {
+  @include button($background-color: #fff, $color: $color-primary-blue);
+}
+
+//Curved variants
+.btn-curved {
+  @include button();
+}
+
+.btn-curved-inactive {
+  @include button($background-color: #fff, $color: $color-primary-blue);
+}

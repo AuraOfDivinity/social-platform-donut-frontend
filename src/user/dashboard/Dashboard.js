@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import './dashboard.scss';
 import Navigation from './navigation/Navigation';
 import UpcomingEvents from './upcoming-events/UpcomingEvents';
 import Notifications from './notifications/Notifications';
@@ -18,17 +17,17 @@ class Dashboard extends Component {
   render() {
     return (
       <div className='dashboard'>
-        <div className='navigation'>
+        <div className='dashboard__navigation'>
           <Navigation dashboard={this.state.dashboard}></Navigation>
         </div>
-        <div className='news'>
-          <div className='notify-user'>
+        <div className='dashboard__news'>
+          <div className='news__notifications'>
             <UpcomingEvents></UpcomingEvents>
             <Notifications></Notifications>
           </div>
           <NewsFeed></NewsFeed>
         </div>
-        <div className='promotions'>
+        <div className='dashboard__promotions'>
           <Portfolio></Portfolio>
           <Updates></Updates>
         </div>

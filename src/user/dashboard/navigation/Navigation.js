@@ -3,8 +3,7 @@ import { ListGroup, Button } from 'react-bootstrap';
 import { NavLink } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import { DonutTitleSmall } from '../../../donutTitle/DonutTitle';
-import './navigation.scss';
-import { Logout } from '../../profile/popups/Logout';
+import Logout  from '../../profile/popups/Logout';
 import logo from '../../../svgs/logout.svg';
 import SVGIcon from '../../../Icons/SVGIcon';
 
@@ -35,34 +34,34 @@ const Navigation = props => {
       <ListGroup>
         <ListGroup.Item>
           <NavLink to='/dashboard'>
-            <div className='donut-title'>
+            <div className='navigation__title'>
               <DonutTitleSmall />
             </div>
           </NavLink>
         </ListGroup.Item>
         <ListItem
           name='Dashboard'
-          className={props.dashboard ? 'active' : 'inactive'}
+          className={props.dashboard ? 'navigation__listitem--active' : 'navigation__listitem--inactive'}
           link='/dashboard'
         />
         <ListItem
           name='Pinned Posts'
-          className={props.posts ? 'active' : 'inactive'}
+          className={props.posts ? 'navigation__listitem--active' : 'navigation__listitem--inactive'}
           link='/pinned-posts'
         />
         <ListItem
           name='Organization'
-          className={props.org ? 'active' : 'inactive'}
+          className={props.org ? 'navigation__listitem--active' : 'navigation__listitem--inactive'}
           link='/organization'
         />
         <ListItem
           name='Account'
-          className={props.profile ? 'active' : 'inactive'}
+          className={props.profile ? 'navigation__listitem--active' : 'navigation__listitem--inactive'}
           link='profile'
         />
         <ListItem
           name='Settings'
-          className={props.settings ? 'active' : 'inactive'}
+          className={props.settings ? 'navigation__listitem--active' : 'navigation__listitem--inactive'}
           link='/settings'
         />
         <ListGroup.Item style={divStyle}>
@@ -72,7 +71,7 @@ const Navigation = props => {
             style={{ 'margin-left': '-8.5px', color: 'rgba(0, 0, 0, 0.5)' }}
             onClick={() => setLogout(true)}
           >
-            <img class='logout' src={logo} alt='L'></img>
+            <img className='navigation__logout' src={logo} alt='L'></img>
             <b>Logout</b>
           </Button>
           <Logout show={logout} onHide={cancel} />

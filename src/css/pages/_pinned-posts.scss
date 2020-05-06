@@ -1,0 +1,32 @@
+.pinned-posts {
+    display: flex;
+    min-height: 100vh;
+    height: auto;
+    font-family: Muli, sans-serif;
+    h1{
+      font-size: 26px;
+      font-weight: bold;
+      font-family: Muli, sans-serif;
+    }
+    .pinned-posts__navigation {
+      flex: 0.5;
+      border-right: solid 1px #dfe9f1;
+    }
+    .pinned-posts__news {
+      flex: 2;
+      .notify-user {
+        display: flex;
+        padding: 20px 0px 20px 30px;
+      }
+    }
+    .pinned-posts__promotions {
+      flex: 1;
+      margin: 0px 20px;
+    }
+    .pinned-posts__post{
+      padding: 20px 12px 0px 30px;
+    }
+    .pinned-posts__updates{
+      padding: 20px 12px 0px 0px;
+    }
+  }

@@ -1,12 +1,11 @@
-import React, { Component } from 'react';
-import { Button } from 'react-bootstrap';
-import './news-feed.scss';
-import IndividualPost from './items/IndividualPost';
-import feed from '../../../jsonData/news-feed';
-import AddEventModal from './AddEventModal';
-import EventItem from './items/EventItem';
-import NewsItem from './items/NewsItem';
-import SVGIcon from '../../../Icons/SVGIcon';
+import React, { Component } from "react";
+import { Button } from "react-bootstrap";
+import IndividualPost from "./items/IndividualPost";
+import feed from "../../../jsonData/news-feed";
+import AddEventModal from "./AddEventModal";
+import EventItem from "./items/EventItem";
+import NewsItem from "./items/NewsItem";
+import SVGIcon from "../../../Icons/SVGIcon";
 
 class NewsFeed extends Component {
   constructor(props) {
@@ -14,35 +13,35 @@ class NewsFeed extends Component {
 
     this.state = {
       date: new Date(),
-      show: false
+      show: false,
     };
   }
 
   handleClose = () => {
     this.setState({
-      show: false
+      show: false,
     });
   };
 
   handleShow = () => {
     this.setState({
-      show: true
+      show: true,
     });
   };
   render() {
     const borderStyle = {
-      borderBottom: '0 none'
+      borderBottom: "0 none",
     };
     var content;
 
     let newsFeed = feed.map((newsItem, index) => {
-      if (newsItem.type === 'Project') {
+      if (newsItem.type === "Project") {
         content = newsItem.eventImage ? (
           <NewsItem newsItem={newsItem}></NewsItem>
         ) : (
           <div></div>
         );
-      } else if (newsItem.type === 'Event') {
+      } else if (newsItem.type === "Event") {
         content = newsItem.eventImage ? (
           <EventItem newsItem={newsItem}></EventItem>
         ) : (
@@ -57,17 +56,17 @@ class NewsFeed extends Component {
       );
     });
     return (
-      <div className='news-feed'>
-        <div className='post-article'>
-          <div className='article'>
+      <div className="newsfeed">
+        <div className="newsfeed__container">
+          <div className="newsfeed__newpost-container">
             <input
-              type='text'
-              className='post-input'
-              placeholder='write a post...'
+              type="text"
+              className="newsfeed__input-field"
+              placeholder="write a post..."
             />
-            <div className='cta'>
-              <Button variant='primary' onClick={this.handleShow}>
-                <SVGIcon name='Event' fill='white' />
+            <div className="newsfeed__button-container">
+              <Button variant="primary" onClick={this.handleShow}>
+                <SVGIcon name="Event" fill="white" />
                 Event
               </Button>
               <AddEventModal
@@ -75,19 +74,19 @@ class NewsFeed extends Component {
                 handleClose={this.handleClose}
                 borderStyle={borderStyle}
               />
-              <Button variant='primary'>
-                <SVGIcon name='Project' fill='white' />
+              <Button variant="primary">
+                <SVGIcon name="Project" fill="white" />
                 Project
               </Button>
             </div>
           </div>
-          <div className='categories'>
-            <div className='category-type active'>All</div>
-            <div className='category-type'>Donuts</div>
-            <div className='category-type'>Events</div>
-            <div className='category-type'>Projects</div>
+          <div className="newsfeed__categories">
+            <div className="category-type active">All</div>
+            <div className="category-type">Donuts</div>
+            <div className="category-type">Events</div>
+            <div className="category-type">Projects</div>
           </div>
-          <div className='article-posts'>{newsFeed}</div>
+          <div className="newsfeed__posts">{newsFeed}</div>
         </div>
       </div>
     );

@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import './posts.scss';
 import IndividualPost from './IndividualPost';
 
 class Posts extends Component {

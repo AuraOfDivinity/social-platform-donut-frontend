@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
-import './user-info.scss';
 import { Button } from 'react-bootstrap';
-import { EditProfile } from '../popups/EditProfile';
+import  EditProfile  from '../popups/EditProfile';
 import { Followers } from '../popups/Followers';
 class UserInfo extends Component {
   state = { editProfile: false, followersList: false };

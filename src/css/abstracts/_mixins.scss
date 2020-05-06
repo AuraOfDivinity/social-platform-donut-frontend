@@ -1,0 +1,40 @@
+// LISTS
+
+@mixin reset-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+// BUTTONS
+
+// 1. Button creator mixin
+@mixin button(
+  $width: $button-medium-width,
+  $background-color: $color-primary-blue,
+  $color: $color-primary-white,
+  $shadow: $shadow-button-default,
+  $radius: $button-medium-radius
+) {
+  font-weight: bold;
+  background: $background-color !important;
+  box-shadow: $shadow;
+  color: $color !important;
+  border-radius: $radius !important;
+  width: $width;
+  margin-right: 15px;
+  margin-bottom: 10px;
+  margin-left: 14px;
+}
+
+// 2. Set Button theme with a given background color
+@mixin button-background($bg) {
+  background: $bg;
+  &:hover {
+    background: darken($bg, 8%);
+    transition: all 0.3s ease;
+  }
+  &:active {
+    background: darken($bg, 25%);
+  }
+}

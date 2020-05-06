@@ -1,33 +1,49 @@
-import React, {Component} from 'react';
-import {Modal, Button} from 'react-bootstrap';
-import "./popups.scss";
+import React from "react";
+import { Button, Modal, Form, Col } from "react-bootstrap";
+import PropTypes from "prop-types";
 
-export class Logout extends Component{
-    // eslint-disable-next-line
-    constructor(props){
-        super(props);
-    }
-    render(){
-    return (
-        <Modal
-      {...this.props}
-      size="md"
-      aria-labelledby="contained-modal-title-vcenter"
-      centered>
-      <div className="container">
-        <Modal.Header closeButton className="heading border border-0 p-0">
-        <Modal.Title id="contained-modal-title-vcenter"> 
-        <div className="title">Logout?</div>
-        <div className="message">Are you sure you want to logout of Donut?</div>
-        </Modal.Title> 
-        </Modal.Header>
-        
-        <div className="form-footer">
-          <Button onClick={this.props.onHide} className="savebtn" size="sm">Yes</Button>
-          <Button variant="outline-primary" onClick={this.props.onHide} size="sm">No</Button>
-        </div>
+const Logout = (props) => {
+  return (
+    <Modal {...props} className="modal">
+      <Modal.Header
+        closeButton
+        className="modal__header"
+        style={props.borderStyle}
+      >
+        <Modal.Title className="modal__title" style={props.borderStyle}>
+          <div className="modal__main-title">Logout</div>
+        </Modal.Title>
+      </Modal.Header>
+      <Modal.Body className="modal__body" style={props.borderStyle}>
+        <Form className="modal__form" style={props.borderStyle}>
+          <Form.Row className="modal__row">
+            <Form.Group
+              as={Col}
+              controlId="formGridFirstName"
+              className="modal__group"
+            >
+              <Form.Label className="modal__message">
+                Are you sure you want logout of Donut?
+              </Form.Label>
+            </Form.Group>
+          </Form.Row>
+        </Form>
+      </Modal.Body>
+      <div>
+        <Button onClick={props.onHide} className="btn-curved">
+          Yes
+        </Button>
+        <Button onClick={props.onHide} className="btn-curved-inactive">
+          No
+        </Button>
       </div>
-      </Modal>
-    );
-  }
-}
+    </Modal>
+  );
+};
+Logout.propTypes = {
+  onClick: PropTypes.func,
+  show: PropTypes.bool,
+  style: PropTypes.object,
+};
+
+export default Logout;

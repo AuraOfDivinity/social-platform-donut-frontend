@@ -1,0 +1,64 @@
+.modal {
+  .modal__header {
+    .modal__title {
+      .modal__main-title {
+        font-family: Inter;
+        font-style: normal;
+        font-weight: 600;
+        font-size: 22px;
+        line-height: 39px;
+        color: $color-modal-title;
+      }
+      .modal__mini-title {
+        font-family: Inter;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 12px;
+        line-height: 19px;
+        color: $color-modal-miniheader;
+        letter-spacing: 0.2em;
+        padding-top: 5px;
+      }
+    }
+  }
+  .modal__body {
+    .modal__form {
+      .modal__row {
+        .modal__group {
+          .modal__label {
+            font-family: Inter;
+            font-weight: 600;
+            font-size: 12px;
+            color: $color-modal-form-label;
+            margin-bottom: 3px;
+          }
+          .modal__post {
+            border: 0.75px solid $color-modal-field-border;
+            box-sizing: border-box;
+            border-radius: 5px;
+            text-align: left;
+            resize: none;
+          }
+          .modal__message {
+            font-family: Inter;
+            font-style: normal;
+            font-weight: 700;
+            font-size: 16px;
+            color: #000000;
+            margin-bottom: 3px;
+          }
+        }
+      }
+      .modal__secondary-title {
+        font-family: Inter;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 12px;
+        line-height: 19px;
+        color: $color-modal-miniheader;
+        letter-spacing: 0.2em;
+        padding-top: 18px;
+      }
+    }
+  }
+}

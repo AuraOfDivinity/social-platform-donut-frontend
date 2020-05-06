@@ -36,11 +36,11 @@ const CustomMenu = React.forwardRef(
 const IndividualPost = props => (
   <div className='individual-post'>
     {props.content}
-    <div className='user-info'>
-      <div className='image'>
+    <div className='individual-post__container'>
+      <div className='individual-post__image'>
         <img src={props.newsItem.imgSrc} alt='icon' />
       </div>
-      <div className='img-desc'>
+      <div className='individual-post__user-details'>
         <h2>{props.newsItem.createdBy}</h2>
         <small>{props.newsItem.created}</small>
       </div>
@@ -54,22 +54,22 @@ const IndividualPost = props => (
         </Dropdown>
       </div>
     </div>
-    <div className='post-details'>
+    <div className='individual-post__feedback'>
       <p>{props.newsItem.details}</p>
-      <div className='post-activity'>
-        <div className='up-vote'>
-          <button className='vote-btn'>
+      <div className='individual-post__vote-container'>
+        <div className='individual-post__upvote'>
+          <button className='individual-post__vote-button'>
             <img src={upVoteImg} alt='Up Vote'></img>
           </button>
           <small>{props.newsItem.upvotes}</small>
         </div>
-        <div className='down-vote'>
-          <button className='vote-btn'>
+        <div className='individual-post__downvote'>
+          <button className='individual-post__vote-button'>
             <img src={downVoteImg} alt='Down Vote'></img>
           </button>
           <small>{props.newsItem.downVotes}</small>
         </div>
-        <div className='comments'>
+        <div className='individual-post__comments'>
           <img src={commentIcon} alt='comment'></img>
           <small>Comment</small>
         </div>

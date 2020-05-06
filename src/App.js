@@ -2,6 +2,7 @@ import React, { Component } from "react";
 // import logo from './logo.svg';
 import Router from "./router";
 import "./App.css";
+import "./css/main.scss"
 
 class App extends Component {
   render() {

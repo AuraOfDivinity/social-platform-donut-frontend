@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import './organization.scss';
 import Navigation from '../dashboard/navigation/Navigation';
 import OrgInfo from './org-info/OrgInfo';
 import Portfolio from '../dashboard/portfolio/Portfolio';
@@ -16,15 +15,15 @@ class Organization extends Component {
   render() {
     return (
       <div className='organization'>
-        <div className='navigation'>
+        <div className='organization__navigation'>
           <Navigation org={this.state.org}></Navigation>
         </div>
-        <div className='news'>
-          <div className='notify-user'>
+        <div className='organization__news'>
+          <div className='organization__content'>
             <OrgInfo></OrgInfo>
             <Portfolio></Portfolio>
           </div>
-          <div className='posts-profile'>
+          <div className='organization__posts'>
             <Posts></Posts>
           </div>
         </div>

@@ -1,5 +1,4 @@
 import React from 'react';
-import './notifications.scss';
 import customNotifications from '../../../jsonData/notifications';
 
 const Notifications = () => {
@@ -7,8 +6,8 @@ const Notifications = () => {
     return (
       <div key={i}>
         <div className='notification-container'>
-          <div className='notification-img-container'>
-            <img alt='notification-icon' src={notification.imgSrc}></img>
+          <div className='notification-container__image'>
+            <img alt='image__icon' src={notification.imgSrc}></img>
           </div>
           <div className='notification-description'>
             <h6>{notification.heading}</h6>
@@ -27,10 +26,10 @@ const Notifications = () => {
   });
   return (
     <div className='notifications'>
-      <div className='text-center heading-container'>
+      <div className='text-center notifications__heading'>
         <h5>Notifications</h5>
       </div>
-      <div className='all-notifications'>{notifications}</div>
+      <div className='notifications__allnotifications'>{notifications}</div>
     </div>
   );
 };

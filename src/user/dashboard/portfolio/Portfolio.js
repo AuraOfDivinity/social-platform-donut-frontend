@@ -1,5 +1,4 @@
 import React from 'react';
-import './portfolio.scss';
 
 const data1 = {
   title1: 'Donuts',

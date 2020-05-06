@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import './profile.scss';
 import Navigation from '../dashboard/navigation/Navigation';
 import UserInfo from './user-info/UserInfo';
 import Portfolio from '../dashboard/portfolio/Portfolio';
@@ -16,15 +15,15 @@ class Profile extends Component {
   render() {
     return (
       <div className='profile'>
-        <div className='navigation'>
+        <div className='profile__navigation'>
           <Navigation profile={this.state.profile}></Navigation>
         </div>
-        <div className='news'>
-          <div className='notify-user'>
+        <div className='profile__news'>
+          <div className='profile__content'>
             <UserInfo></UserInfo>
             <Portfolio></Portfolio>
           </div>
-          <div className='posts-profile'>
+          <div className='profile__posts'>
             <Posts></Posts>
           </div>
         </div>
